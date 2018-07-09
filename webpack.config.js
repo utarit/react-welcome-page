@@ -2,7 +2,7 @@ var path = require('path');
  
 module.exports = {
     mode: 'production',
-    entry: './src/Welcome.jsx',
+    entry: './src/Welcome.js',
     output: {
         path: path.resolve('lib'),
         filename: 'Welcome.js',
