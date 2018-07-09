@@ -14,8 +14,6 @@ https://github.com/utarit/react-welcome-page
 
 ![Example Screen](https://i.imgur.com/NfzYzz5.gif)
 
-### React Native App
-  ![React Native  version](https://i.imgur.com/Frccl5j.gif)
 
 ```
 <Welcome
