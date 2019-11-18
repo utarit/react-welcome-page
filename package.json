@@ -1,6 +1,6 @@
 {
     "name": "react-welcome-page",
-    "version": "0.1.9",
+    "version": "0.2.2",
     "description": "Simple and beautiful welcome page for React",
     "main": "./dist/Welcome.js",
     "homepage": "https://github.com/utarit/react-welcome-page",

@@ -53,6 +53,7 @@ class Welcome extends React.Component {
         return(
             <Container status={this.state.finished ? 'finished' : 'moveOn'} >
                 <OuterContainer 
+                    className="react-welcome-page"
                     prevBackColor={prevBackColor}
                     animation={this.props.loopDuration ? this.props.loopDuration : 1000}
                     backColor={backgroundColor}
