@@ -15,7 +15,7 @@ require('../../styles.css');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Image = function Image(props) {
-    return _react2.default.createElement('img', _extends({}, props, { src: props.image, alt: '' }));
+    return _react2.default.createElement('img', _extends({}, props, { src: props.image, width: '100', height: '100', alt: '' }));
 };
 
 exports.default = Image;
