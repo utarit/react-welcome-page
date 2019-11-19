@@ -1,4 +1,14 @@
-.react-welcome-page .outer-container {
+.react-welcome-page-moveOn {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.react-welcome-page-moveOn .outer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,28 +21,18 @@
   height: 100%;
   width: 100%;
 }
-  
-.react-welcome-page .moveOn {
-  background-color: whitesmoke;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-  
-.react-welcome-page .finished {
-  display: none;
-}
-  
-.react-welcome-page img {
+
+.react-welcome-page-moveOn img {
   height: 100px;
   width: 100px;
 }
   
-.react-welcome-page .inner-container {
+.react-welcome-page-moveOn .inner-container {
   text-align: center;
+}
+  
+.react-welcome-page-finished {
+  display: none;
 }
 
 @charset "UTF-8";

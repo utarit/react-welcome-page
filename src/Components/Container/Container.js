@@ -10,7 +10,7 @@ bottom: 0;
 left: 0;
 right: 0;
 z-index: 1;
-display: ${props => props.status === 'finished' ? 'none' : 'initial'};
+display: ${props => props.status === 'react-welcome-page-finished' ? 'none' : 'initial'};
 `
 
 const Container = (props) => (
