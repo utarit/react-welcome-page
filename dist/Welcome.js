@@ -10,7 +10,25 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('./styles.css');
+var _Container = require('./Components/Container/Container');
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _OuterContainer = require('./Components/OuterContainer/OuterContainer');
+
+var _OuterContainer2 = _interopRequireDefault(_OuterContainer);
+
+var _InnerContainer = require('./Components/InnerContainer/InnerContainer');
+
+var _InnerContainer2 = _interopRequireDefault(_InnerContainer);
+
+var _Image = require('./Components/Image/Image');
+
+var _Image2 = _interopRequireDefault(_Image);
+
+var _LogoText = require('./Components/LogoText/LogoText');
+
+var _LogoText2 = _interopRequireDefault(_LogoText);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -79,34 +97,34 @@ var Welcome = function (_React$Component) {
                 textColor = _props$data$state$ind6 === undefined ? 'black' : _props$data$state$ind6;
 
 
-            if (this.state.index !== 0) {
-                var prevBackColor = this.props.data[this.state.index - 1].backgroundColor;
-                var prevTextColor = this.props.data[this.state.index - 1].textColor;
-                var keyframes = '@keyframes example {\n                        from {background-color: ' + prevBackColor + '; color: ' + prevTextColor + '}\n                        to {background-color: ' + backgroundColor + '; color: ' + textColor + '}\n                    }';
-
-                var styleSheet = document.styleSheets[0];
-                styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-            }
+            var prevBackColor = this.state.index !== 0 ? this.props.data[this.state.index - 1].backgroundColor : backgroundColor;
 
             return _react2.default.createElement(
-                'div',
-                { className: this.state.finished ? 'finished' : 'moveOn' },
+                _Container2.default,
+                { status: this.state.finished ? 'react-welcome-page-finished' : 'react-welcome-page-moveOn' },
                 _react2.default.createElement(
-                    'div',
+                    _OuterContainer2.default,
                     {
-                        style: this.state.index ? {
-                            animation: 'example ' + (this.props.loopDuration ? this.props.loopDuration : 1000) + 'ms ease'
-                        } : { backgroundColor: backgroundColor, color: textColor },
-                        key: this.state.index,
-                        className: 'outer-container' },
+                        className: 'react-welcome-page',
+                        prevBackColor: prevBackColor,
+                        animation: this.props.loopDuration ? this.props.loopDuration : 1000,
+                        backColor: backgroundColor,
+                        index: this.state.index,
+                        key: this.state.index
+                    },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'inner-container' },
-                        _react2.default.createElement('img', { className: 'animated ' + imageAnimation, src: image, alt: '' }),
+                        _InnerContainer2.default,
+                        null,
+                        _react2.default.createElement(_Image2.default, { duration: this.props.loopDuration ? this.props.loopDuration : 1000, className: 'animated ' + imageAnimation, image: image }),
                         _react2.default.createElement(
-                            'p',
-                            { className: 'animated ' + textAnimation },
-                            text
+                            _LogoText2.default,
+                            {
+                                textColor: textColor,
+                                duration: this.props.loopDuration ? this.props.loopDuration : 1000,
+                                className: 'animated ' + textAnimation },
+                            ' ',
+                            text,
+                            ' '
                         )
                     )
                 )

@@ -51,7 +51,7 @@ class Welcome extends React.Component {
 
 
         return(
-            <Container status={this.state.finished ? 'finished' : 'moveOn'} >
+            <Container status={this.state.finished ? 'react-welcome-page-finished' : 'react-welcome-page-moveOn'} >
                 <OuterContainer 
                     className="react-welcome-page"
                     prevBackColor={prevBackColor}
